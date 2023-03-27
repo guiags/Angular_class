@@ -1,0 +1,9 @@
+<div class="class">
+    <form>
+        <input [(ngModel)] = "name" name = "name" placeholder="insira o nome">
+        <input type="submit" value="Enviar">
+    </form>
+    <div *ngIf = "name !== ''">
+        <p>O nome inserido é {{ name | uppercase }}.</p>
+    </div>
+</div>

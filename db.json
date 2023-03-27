@@ -1,0 +1,8 @@
+{"animals": [
+    {"name": "Alice", "type": "Dog", "age":"12"},
+    {"name": "Lorde", "type": "Dog", "age": "4"},
+    {"name": "Angolianth", "type": "Spider", "age": "15"},
+    {"name": "Huang", "type": "Giant Dog", "age": "15000"},
+    {"name": "Pica-pau", "type": "Ave", "age": "60"}
+  ]
+}

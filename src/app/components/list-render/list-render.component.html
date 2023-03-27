@@ -1,0 +1,17 @@
+<div class= "class">
+    <ul>
+        <li *ngFor = "let animal of animals">
+            <b>Animal:</b> {{ animal.name }} - <b>Tipo:</b> {{ animal.type }}
+            <button (click)="showAge(animal)">Show age</button>
+            <button (click)="removeAnimal(animal)">Excluir</button>
+        </li>
+    </ul>
+    <h3>{{animaldetail}}</h3>
+</div>
+<div class="class" id="temp">
+    <h1>Localidade: {{weather.name}}</h1>
+    <h3>Latitude: {{weather.coord.lat}}°</h3>
+    <h3>Longitude: {{weather.coord.lon}}°</h3>
+    <h2>Temperatura: {{weather.main.temp}}° Kelvin</h2>
+
+</div>

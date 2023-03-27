@@ -2,3 +2,10 @@ h1{
     color: brown;
     text-align: center;
 }
+nav a{
+    padding: 1%;
+
+}
+nav{
+    text-align: center;
+}

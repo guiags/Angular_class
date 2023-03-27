@@ -15,7 +15,7 @@ export class EventosComponent {
     }else{
       this.showMessage = false;
     }*/
-    this.showMessage = !this.showMessage;
+    this.showMessage = !this.showMessage; // toggle
   }
   
 
