@@ -13,12 +13,16 @@ import { Tempo } from 'src/app/tempo';
 export class ListRenderComponent {
   animals: Animal[]= [];
   weather = {} as Tempo ;
+  temperatura : number = 0;
+  public geoloc = {} as any;
+
 
   animaldetail = '';
 
   constructor(private listService: ListService){
     this.getAnimals();
     this.getWeather();
+    this.getLoca();
   }
 
   showAge(animal: Animal): void{
@@ -36,5 +40,11 @@ export class ListRenderComponent {
   getWeather(): void{
     //this.listService.getwet().subscribe((weather)=>(this.weather = weather));
     this.listService.getwet().subscribe((weather)=>{console.log(this.weather); this.weather = weather;});
+    //this.temperatura = this.weather.main.temp - 273.15;
+    //console.log(this.weather.main.temp);
+  }
+  getLoca(): void{
+    this.listService.getLocate().subscribe((geoloc)=>{console.log(this.geoloc); this.geoloc = geoloc;});
+    console.log(this.geoloc.results);
   }
 }

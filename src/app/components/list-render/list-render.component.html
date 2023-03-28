@@ -9,9 +9,19 @@
     <h3>{{animaldetail}}</h3>
 </div>
 <div class="class" id="temp">
-    <h1>Localidade: {{weather.name}}</h1>
-    <h3>Latitude: {{weather.coord.lat}}°</h3>
-    <h3>Longitude: {{weather.coord.lon}}°</h3>
-    <h2>Temperatura: {{weather.main.temp}}° Kelvin</h2>
+    <h2>Localidade: {{weather.name}} - {{weather.sys.country}}</h2>
+    <h4>Latitude: {{weather.coord.lat}}°</h4>
+    <h4>Longitude: {{weather.coord.lon}}°</h4>
+    <!--<h3>{{weather.weather[0].main}}</h3>-->
+    <h3>Max: {{weather.main.temp_max}}°   &nbsp;&nbsp;&nbsp; Min: {{weather.main.temp_min}}°</h3>
+    <i class="fa-solid fa-cloud" *ngIf = "weather.weather[0].main == 'Clouds'"></i>
+    <i class="fa-solid fa-raindrops" *ngIf = "weather.weather[0].main == 'Rain'"></i>
+    <i class="fa-solid fa-snowflake" *ngIf = "weather.weather[0].main == 'Snow'"></i>
+    <i class="fa-solid fa-sun-dust" *ngIf = "weather.weather[0].main == 'Extreme'"></i>
+    
+    <h3>Temperatura: {{weather.main.temp}}° Celsius</h3>
+
+    <h3>{{geoloc.results[0].geometry.location.lat}}</h3>
+    <h3>{{geoloc.results[0].geometry.location.lng}}</h3>
 
 </div>
